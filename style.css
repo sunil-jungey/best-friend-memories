@@ -32,7 +32,8 @@ body {
     inset: 0;
 
     width: 100%;
-    min-height: 100vh;
+    height: 100dvh;
+    min-height: 100dvh;
 
     display: none;
 
@@ -231,8 +232,7 @@ h2 {
     position: absolute;
 
     left: 50%;
-    bottom: max(40px, env(safe-area-inset-bottom));
-
+    bottom: 100px;
     transform: translateX(-50%);
 
     width: 88%;
@@ -411,7 +411,7 @@ h2 {
     position: absolute;
 
     left: 50%;
-    bottom: max(38px, env(safe-area-inset-bottom));
+    bottom: 100px;
 
     transform: translateX(-50%);
 
@@ -500,5 +500,17 @@ h2 {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+@media (max-width: 600px) {
+
+    .photo-caption,
+    .sky-fly-caption {
+        bottom: 105px;
+    }
+
+    .photo-caption p,
+    .sky-fly-caption p {
+        margin-bottom: 14px;
     }
 }
