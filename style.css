@@ -193,3 +193,40 @@ h1 {
         font-size: 17px;
     }
 }
+/* Story screens */
+
+.distance-icon {
+    font-size: 60px;
+    margin-bottom: 25px;
+
+    animation: floatEnvelope 2.5s ease-in-out infinite;
+}
+
+
+#continueButton,
+#birthdayButton {
+    border: none;
+
+    padding: 16px 34px;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: white;
+
+    background:
+        linear-gradient(135deg, #d9988f, #b9788e);
+
+    box-shadow:
+        0 10px 30px rgba(185, 120, 142, 0.30);
+
+    cursor: pointer;
+}
+
+
+.friendship-screen,
+.thank-you-screen {
+    animation: pageAppear 0.9s ease;
+}
