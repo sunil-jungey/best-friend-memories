@@ -219,7 +219,70 @@ document
     .getElementById("afterSkyButton")
     .addEventListener("click", function () {
 
-        alert("Next section coming up ❤️");
+        showScene("groupPhotoOne");
+
+    });
+
+
+document
+    .getElementById("groupNextOne")
+    .addEventListener("click", function () {
+
+        showScene("groupPhotoTwo");
+
+    });
+
+
+document
+    .getElementById("groupNextTwo")
+    .addEventListener("click", function () {
+
+        showScene("scenicScene");
+
+    });
+
+
+document
+    .getElementById("scenicNext")
+    .addEventListener("click", function () {
+
+        showScene("funMemory");
+
+    });
+
+
+document
+    .getElementById("funNext")
+    .addEventListener("click", function () {
+
+        showScene("smallMemory");
+
+    });
+
+
+document
+    .getElementById("letterIntroButton")
+    .addEventListener("click", function () {
+
+        showScene("letterIntro");
+
+    });
+
+
+document
+    .getElementById("openLetterButton")
+    .addEventListener("click", function () {
+
+        showScene("letterScene");
+
+    });
+
+
+document
+    .getElementById("finalButton")
+    .addEventListener("click", function () {
+
+        showScene("finalScene");
 
     });
     musicButton.addEventListener("click", function () {
