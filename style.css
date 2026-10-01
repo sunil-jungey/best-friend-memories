@@ -654,3 +654,86 @@ h2 {
 .music-button:active {
     transform: scale(0.92);
 }
+/* =========================
+   LETTER
+   ========================= */
+
+.letter-scene {
+    overflow-y: auto;
+    align-items: flex-start;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.letter-paper {
+    width: 100%;
+    max-width: 430px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    padding: 32px 26px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 45px rgba(90, 60, 70, 0.15);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    animation: letterAppear 1s ease;
+}
+
+.letter-name {
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #70495b;
+
+    margin-bottom: 20px;
+}
+
+.letter-text {
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #66535b;
+
+    margin-bottom: 28px;
+}
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   FINAL SCREEN
+   ========================= */
+
+.final-heart {
+    font-size: 82px;
+
+    margin-bottom: 25px;
+
+    animation: gentleFloat 2.8s ease-in-out infinite;
+}
+
+.final-small {
+    margin-top: 24px;
+
+    font-size: 13px;
+
+    color: #a38b95;
+
+    letter-spacing: 1px;
+}
