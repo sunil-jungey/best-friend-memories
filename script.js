@@ -308,54 +308,6 @@ document
     }
 
 });
-/* =========================
-   FLOATING FRIENDSHIP PARTICLES
-   ========================= */
-
-const particleContainer =
-    document.getElementById("particles");
-
-const particleSymbols = [
-    "✨",
-    "🌼",
-    "⭐"
-];
-
-function createParticle() {
-
-    if (!particleContainer) {
-        return;
-    }
-
-    const particle =
-        document.createElement("span");
-
-    particle.className = "particle";
-
-    particle.textContent =
-        particleSymbols[
-            Math.floor(
-                Math.random() * particleSymbols.length
-            )
-        ];
-
-    particle.style.left =
-        Math.random() * 95 + "vw";
-
-    particle.style.fontSize =
-        (18 + Math.random() * 18) + "px";
-
-    particle.style.animationDuration =
-        (5 + Math.random() * 3) + "s";
-
-    particleContainer.appendChild(particle);
-
-    setTimeout(function () {
-        particle.remove();
-    }, 8500);
-}
-
-setInterval(createParticle, 700);
 
 /* =========================
    FINAL CONFETTI
