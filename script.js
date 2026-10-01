@@ -306,3 +306,104 @@ document
     }
 
 });
+/* =========================
+   FLOATING FRIENDSHIP PARTICLES
+   ========================= */
+
+const particleContainer =
+    document.getElementById("particles");
+
+const particleSymbols = [
+    "✨",
+    "💛",
+    "🤍",
+    "🌼",
+    "⭐"
+];
+
+
+function createParticle() {
+
+    const particle =
+        document.createElement("span");
+
+    particle.classList.add("particle");
+
+    particle.textContent =
+        particleSymbols[
+            Math.floor(
+                Math.random() * particleSymbols.length
+            )
+        ];
+
+    particle.style.left =
+        Math.random() * 100 + "vw";
+
+    particle.style.animationDuration =
+        (5 + Math.random() * 4) + "s";
+
+    particle.style.fontSize =
+        (16 + Math.random() * 16) + "px";
+
+    particleContainer.appendChild(particle);
+
+
+    setTimeout(function () {
+
+        particle.remove();
+
+    }, 9000);
+}
+
+
+setInterval(createParticle, 1100);
+
+
+/* =========================
+   FINAL CONFETTI
+   ========================= */
+
+function launchConfetti() {
+
+    const symbols = [
+        "✨",
+        "💛",
+        "🤍",
+        "🌼",
+        "⭐",
+        "🎉"
+    ];
+
+    for (let i = 0; i < 45; i++) {
+
+        const piece =
+            document.createElement("span");
+
+        piece.classList.add("confetti");
+
+        piece.textContent =
+            symbols[
+                Math.floor(
+                    Math.random() * symbols.length
+                )
+            ];
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        piece.style.animationDuration =
+            (2.5 + Math.random() * 2) + "s";
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(function () {
+
+            piece.remove();
+
+        }, 5000);
+    }
+}
