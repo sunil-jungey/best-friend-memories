@@ -131,3 +131,70 @@ document
         showScene("nextScene");
 
     });
+
+
+const skySlides = [
+
+    {
+        image: "IMG_0539.jpeg",
+        text: "Another little piece of that day ✨"
+    },
+
+    {
+        image: "IMG_0540.jpeg",
+        text: "Some places become special because of who was there."
+    },
+
+    {
+        image: "IMG_0541.jpeg",
+        text: "A simple photo, but a memory worth keeping. 🤍"
+    }
+
+];
+
+
+let currentSkySlide = 0;
+
+
+document
+    .getElementById("slideshowNext")
+    .addEventListener("click", function () {
+
+        currentSkySlide++;
+
+        if (currentSkySlide < skySlides.length) {
+
+            const image =
+                document.getElementById("slideshowImage");
+
+            const text =
+                document.getElementById("slideshowText");
+
+            image.classList.remove("change");
+
+            void image.offsetWidth;
+
+            image.src =
+                skySlides[currentSkySlide].image;
+
+            text.textContent =
+                skySlides[currentSkySlide].text;
+
+            image.classList.add("change");
+
+        } else {
+
+            showScene("afterSkyScene");
+
+        }
+
+    });
+
+
+document
+    .getElementById("afterSkyButton")
+    .addEventListener("click", function () {
+
+        alert("Next section coming up ❤️");
+
+    });
