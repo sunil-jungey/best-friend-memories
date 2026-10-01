@@ -697,7 +697,7 @@ musicButton.addEventListener(
 
 /* =========================================================
    RANDOM HEARTS
-   ❤️ + 💛
+   ❤️
 
    IMPORTANT:
    These hearts start at random positions around
@@ -711,8 +711,6 @@ const heartSymbols = [
     "❤️",
     "❤️",
     "❤️",
-    "💛",
-    "💛"
 ];
 
 
