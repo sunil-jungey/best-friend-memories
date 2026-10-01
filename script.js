@@ -1,5 +1,13 @@
 const scenes = document.querySelectorAll(".scene");
 
+const backgroundMusic =
+    document.getElementById("backgroundMusic");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+let musicPlaying = false;
+
 function showScene(id) {
     scenes.forEach(scene => {
         scene.classList.remove("active");
@@ -18,6 +26,22 @@ document
     .addEventListener("click", function () {
 
         showScene("distanceScene");
+
+        backgroundMusic.volume = 0.3;
+
+        backgroundMusic.play()
+            .then(function () {
+
+                musicPlaying = true;
+                musicButton.textContent = "🔊";
+
+            })
+            .catch(function () {
+
+                musicPlaying = false;
+                musicButton.textContent = "🎵";
+
+            });
 
     });
 
@@ -198,3 +222,24 @@ document
         alert("Next section coming up ❤️");
 
     });
+    musicButton.addEventListener("click", function () {
+
+    if (musicPlaying) {
+
+        backgroundMusic.pause();
+
+        musicPlaying = false;
+
+        musicButton.textContent = "🔇";
+
+    } else {
+
+        backgroundMusic.play();
+
+        musicPlaying = true;
+
+        musicButton.textContent = "🔊";
+
+    }
+
+});
