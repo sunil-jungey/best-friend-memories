@@ -316,12 +316,12 @@ document
 function launchConfetti() {
 
     const symbols = [
-        "✨",
-        "💛",
-        "🤍",
-        "🌼",
-        "⭐",
-        "🎉"
+        "✨🌙",
+        "💛❤️",
+        "🤍❤️",
+        "🌼🌹",
+        "⭐🌟",
+        "🎉🎊"
     ];
 
     for (let i = 0; i < 45; i++) {
