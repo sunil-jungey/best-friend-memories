@@ -514,3 +514,109 @@ h2 {
         margin-bottom: 14px;
     }
 }
+/* =========================
+   SKY TOWER SLIDESHOW
+   ========================= */
+
+.slideshow-scene {
+    padding: 0;
+    background: black;
+}
+
+.slideshow-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border: none;
+    border-radius: 0;
+
+    animation: slideshowEnter 1.2s ease forwards;
+}
+
+@keyframes slideshowEnter {
+
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.slideshow-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.03) 45%,
+            rgba(0,0,0,0.75) 100%
+        );
+
+    z-index: 1;
+}
+
+
+.slideshow-caption {
+    position: absolute;
+
+    left: 50%;
+    bottom: 105px;
+
+    transform: translateX(-50%);
+
+    width: 88%;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+.slideshow-caption p {
+    color: white;
+
+    font-size: 21px;
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 3px 14px rgba(0,0,0,0.7);
+}
+
+
+.slideshow-image.change {
+    animation: slideshowChange 0.9s ease forwards;
+}
+
+@keyframes slideshowChange {
+
+    0% {
+        opacity: 0;
+        transform: translateX(45px) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
