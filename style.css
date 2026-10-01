@@ -78,7 +78,7 @@ body::after {
 /* Left / middle stream */
 
 body::before {
-    content: "✨      🌼      ⭐      ✨";
+    content: "🌟     🌹      🌟      ❤️";
 
     left: 3%;
 
@@ -93,7 +93,7 @@ body::before {
 /* Right / middle stream */
 
 body::after {
-    content: "⭐      ✨      🌼      ⭐";
+    content: "🥰      🌙      🫠     🫶";
 
     right: 3%;
 
