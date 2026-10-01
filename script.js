@@ -284,6 +284,8 @@ document
 
         showScene("finalScene");
 
+        launchConfetti();
+
     });
     musicButton.addEventListener("click", function () {
 
