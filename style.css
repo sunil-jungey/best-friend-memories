@@ -818,3 +818,119 @@ h2 {
         opacity: 0;
     }
 }
+/* =========================
+   GUARANTEED CSS FLOATERS
+   ========================= */
+
+.floaters {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 99999;
+}
+
+
+.floaters span {
+    position: absolute;
+
+    bottom: -60px;
+
+    font-size: 24px;
+
+    opacity: 0;
+
+    animation: floatUp 8s linear infinite;
+}
+
+
+/* Different positions */
+
+.floaters span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.floaters span:nth-child(2) {
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.floaters span:nth-child(3) {
+    left: 32%;
+    animation-delay: 4s;
+}
+
+.floaters span:nth-child(4) {
+    left: 48%;
+    animation-delay: 1s;
+}
+
+.floaters span:nth-child(5) {
+    left: 62%;
+    animation-delay: 3s;
+}
+
+.floaters span:nth-child(6) {
+    left: 75%;
+    animation-delay: 5s;
+}
+
+.floaters span:nth-child(7) {
+    left: 87%;
+    animation-delay: 1.5s;
+}
+
+.floaters span:nth-child(8) {
+    left: 95%;
+    animation-delay: 4.5s;
+}
+
+
+/* Slightly different speeds */
+
+.floaters span:nth-child(2),
+.floaters span:nth-child(5) {
+    animation-duration: 10s;
+}
+
+.floaters span:nth-child(3),
+.floaters span:nth-child(7) {
+    animation-duration: 7s;
+}
+
+
+@keyframes floatUp {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform:
+            translateY(-115dvh)
+            rotate(25deg)
+            scale(1.2);
+
+        opacity: 0;
+    }
+}
