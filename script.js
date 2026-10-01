@@ -1,0 +1,133 @@
+const scenes = document.querySelectorAll(".scene");
+
+function showScene(id) {
+    scenes.forEach(scene => {
+        scene.classList.remove("active");
+    });
+
+    const nextScene = document.getElementById(id);
+
+    nextScene.classList.add("active");
+}
+
+
+/* OPENING */
+
+document
+    .getElementById("startButton")
+    .addEventListener("click", function () {
+
+        showScene("distanceScene");
+
+    });
+
+
+/* DISTANCE */
+
+document
+    .getElementById("distanceNext")
+    .addEventListener("click", function () {
+
+        showScene("thankYouScene");
+
+    });
+
+
+/* THANK YOU */
+
+document
+    .getElementById("birthdayButton")
+    .addEventListener("click", function () {
+
+        showScene("birthdayIntro");
+
+    });
+
+
+/* BIRTHDAY INTRO */
+
+document
+    .getElementById("birthdayPhotoButton")
+    .addEventListener("click", function () {
+
+        showScene("birthdayPhotoOne");
+
+    });
+
+
+/* BIRTHDAY PHOTO 1 */
+
+document
+    .getElementById("birthdayPhotoNext")
+    .addEventListener("click", function () {
+
+        showScene("birthdayPhotoTwo");
+
+    });
+
+
+/* BIRTHDAY PHOTO 2 */
+
+document
+    .getElementById("skyIntroButton")
+    .addEventListener("click", function () {
+
+        showScene("skyIntro");
+
+    });
+
+
+/* SKY TOWER FLY-IN */
+
+document
+    .getElementById("skyFlyButton")
+    .addEventListener("click", function () {
+
+        showScene("skyFlyScene");
+
+        const skyImage =
+            document.querySelector(".sky-fly-image");
+
+        const skyCaption =
+            document.querySelector(".sky-fly-caption");
+
+
+        /* Reset animation first */
+
+        skyImage.classList.remove("fly");
+        skyCaption.classList.remove("show");
+
+
+        /*
+        Force browser to reset the animation.
+        This allows it to replay if needed.
+        */
+
+        void skyImage.offsetWidth;
+
+
+        /* Start flying photo */
+
+        skyImage.classList.add("fly");
+
+
+        /* Show caption after photo arrives */
+
+        setTimeout(function () {
+
+            skyCaption.classList.add("show");
+
+        }, 2100);
+
+    });
+
+
+/* AFTER SKY TOWER */
+
+document
+    .getElementById("skyNextButton")
+    .addEventListener("click", function () {
+
+        showScene("nextScene");
+
+    });
