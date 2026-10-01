@@ -357,3 +357,64 @@ function launchConfetti() {
         }, 5000);
     }
 }
+document
+    .getElementById("questionButton")
+    .addEventListener("click", function () {
+
+        showScene("questionScene");
+
+    });
+
+
+const yesButton =
+    document.getElementById("yesButton");
+
+const noButton =
+    document.getElementById("noButton");
+
+
+yesButton.addEventListener("click", function () {
+
+    showScene("yesScene");
+
+});
+
+
+function moveNoButton() {
+
+    const x =
+        Math.random() * 220 - 110;
+
+    const y =
+        Math.random() * 140 - 70;
+
+    noButton.style.transform =
+        `translate(${x}px, ${y}px)`;
+}
+
+
+/* Laptop / desktop hover */
+noButton.addEventListener(
+    "mouseenter",
+    moveNoButton
+);
+
+
+/* iPhone / touch */
+noButton.addEventListener(
+    "touchstart",
+    function (event) {
+
+        event.preventDefault();
+
+        moveNoButton();
+
+    }
+);
+
+
+/* Extra fallback */
+noButton.addEventListener(
+    "click",
+    moveNoButton
+);
